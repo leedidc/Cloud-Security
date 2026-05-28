@@ -1,0 +1,81 @@
+본 자료는 2026년 5월을 기준으로 작성되었습니다.
+
+Microsoft의 Azure Active Directory(Azure AD)는 클라우드 기반의 사용자 인증 및 접근 관리(Identity and Access Management, IAM) 서비스이다. 현재는 이름이 변경되어 공식적으로는 Microsoft Entra ID 라고 부른다.
+
+[주요기능]
+1. 사용자 인증: 사용자가 로그인할 때 신원을 확인한다.
+(Ex. ID/Password 로그인, MFA(Multi-Factor Authentication), Microsoft Authenticator 인증, SMS 인증, Email OTP 인증, FIDO2 Security Key 인증, Windows Hello 인증, 생체 인증(Fingerprint/Face ID), Passwordless Authentication)
+
+2. 권한 관리: 로그인 이후 어떤 자원에 접근 가능한지 결정한다.
+(Ex. 관리자만 Azure Portal 접근 허용, 인사팀만 HR 시스템 접근 가능, 개발팀만 GitHub Enterprise 접근 허용, 특정 사용자만 SharePoint 문서 수정 가능, 외부 협력업체 계정 접근 제한)
+
+3. SSO: 한 번 로그인하면 여러 서비스에 다시 로그인하지 않아도 된다.
+(Ex. Microsoft 365, Teams, Outlook, SharePoint, OneDrive, GitHub Enterprise, Salesforce, ServiceNow, Zoom, Slack, AWS Console 연동)
+
+4. Conditional Access: 사용자의 상황에 따라 접근 정책을 다르게 적용한다.
+(Ex. 해외 IP 로그인 시 MFA 요구, 미등록 디바이스 접근 차단, 관리자 계정 MFA 강제, 위험 로그인 자동 차단, 사내망 외부 다운로드 제한, Root/Jailbreak 디바이스 차단)
+
+5. Identity Protection: 비정상 로그인이나 계정 탈취 시도를 탐지한다.
+(Ex. Impossible Travel 탐지, TOR/VPN 로그인 탐지, Credential Stuffing 공격 탐지, 유출된 비밀번호 사용 감지, 익명 프록시 로그인 탐지, 비정상 로그인 패턴 분석)
+
+
+Microsoft 의 Active Directory Domain Services(AD DS)는 조직 내 사용자, 컴퓨터, 서버, 프린터 등의 정보를 중앙에서 통합 관리하고 인증(Authentication) 및 권한 관리(Authorization)를 수행하는 디렉터리 서비스이다.
+
+주로 온프레미스(On-Premises) Windows 서버 환경에서 사용되며, 기업 내부 네트워크의 핵심 인증 인프라 역할을 수행한다.
+
+
+eDiscovery(Electronic Discovery)는 조직 내 전자 데이터를 수집, 보존, 검색, 분석하여 법적 대응이나 내부 조사에 활용하는 기능이다.
+
+[주요기능]
+1. Content Search: 조직 내 데이터를 검색하는 기능이다.
+(Ex. 특정 이메일 검색, 특정 키워드 포함 문서 검색, 특정 사용자 Teams 메시지 검색, 날짜 기반 파일 검색, 첨부파일 검색)
+
+2. Legal Hold: 조사 대상 데이터를 삭제되지 않도록 보존하는 기능이다.
+(Ex. 퇴사자 메일 보존, 소송 관련 문서 삭제 방지, 특정 사용자 OneDrive 데이터 보존, Teams 채팅 기록 보존)
+
+3. Case Management: 조사 단위를 Case 형태로 관리하는 기능이다.
+(Ex. 내부 정보 유출 조사 Case 생성, 감사 대응 Case 생성, 직원 부정행위 조사 관리)
+
+4. Data Export: 조사 데이터를 외부로 내보내는 기능이다.
+(Ex. PST 파일 Export, 조사 문서 ZIP Export, Teams 대화 내보내기, 감사용 로그 Export)
+
+5. Audit & Review: 누가 어떤 데이터를 조회하거나 내보냈는지 기록 및 검토하는 기능이다.
+(Ex. 관리자 검색 기록 확인, Export 수행 이력 확인, 감사 로그 분석, 접근 이력 추적)
+
+
+Microsoft Entra External ID 의 Azure AD B2B는 외부 조직 사용자(협력업체, 파트너사, 외부 직원 등)가 자신의 계정으로 조직의 리소스에 접근할 수 있도록 지원하는 기능이다.
+
+Microsoft Entra ID B2C 는 일반 소비자(Customer)를 대상으로 회원가입, 로그인 및 사용자 인증 기능을 제공하는 CIAM(Customer Identity and Access Management) 서비스이다.
+
+
+Microsoft 의 Azure AD Connect는 온프레미스 Active Directory(AD DS)와 Microsoft Entra ID 를 연동하여 사용자 계정, 비밀번호, 그룹 등의 정보를 동기화(Synchronization)하는 도구이다. 즉, 사내 AD 환경과 클라우드 Azure AD 환경을 연결하여 하이브리드 인증 환경(Hybrid Identity)을 구축하는 기능이다.
+
+
+Microsoft 의 Information Barrier는 특정 사용자 또는 그룹 간의 통신 및 데이터 공유를 제한하여 조직 내 이해충돌(Conflict of Interest) 및 정보 유출을 방지하는 기능이다.
+주로 금융, 법률, 공공기관 등 규제가 중요한 환경에서 사용되며, 조직 내 특정 부서 간 정보 교류를 차단하는 역할을 수행한다.
+
+
+Microsoft 환경에서 CSPM(Cloud Security Posture Management)은 클라우드 환경 전체의 보안 설정 상태를 지속적으로 점검하고, 잘못된 설정(misconfiguration)과 보안 위험을 탐지 및 개선하는 기능이다.
+
+
+Microsoft 의 Microsoft Intune은 클라우드 기반의 모바일 및 엔드포인트 관리(MDM/MAM) 서비스로, 회사의 PC, 노트북, 스마트폰, 태블릿 등 다양한 디바이스와 앱을 중앙에서 관리하고 보안 정책을 적용하는 솔루션이다.
+
+[주요기능]
+
+1. Device Management (MDM): 조직의 디바이스를 등록하고 정책을 적용하여 중앙에서 관리하는 기능이다.
+(Ex. 회사 노트북 원격 초기화, OS 업데이트 강제 적용, 디바이스 암호화 요구, 카메라/USB 사용 제한, 분실 디바이스 잠금)
+
+2. Application Management (MAM): 디바이스 전체가 아니라 앱 단위로 데이터를 보호하고 관리하는 기능이다.
+(Ex. Outlook 앱 회사 데이터만 삭제, 개인 카카오톡은 유지하면서 업무 앱만 보호, 앱 내 복사/붙여넣기 제한)
+
+3. Conditional Access Integration: 로그인 조건에 따라 디바이스 접근을 제어하는 기능이다.
+(Ex. Intune 등록된 디바이스만 회사 메일 접근 허용, 비관리 디바이스 Outlook 접근 차단, compliant device만 Teams 접근 허용)
+
+4. Compliance Policies: 디바이스가 보안 기준을 충족하는지 검사하는 기능이다.
+(Ex. PIN 설정 필수, 암호화 활성화 여부 확인, OS 최신 버전 유지 요구, 탈옥/루팅 디바이스 차단)
+
+5. Endpoint Security Management: 디바이스 보안 설정을 통합 관리하는 기능이다.
+(Ex. Microsoft Defender 연동, 방화벽 정책 적용, 악성코드 방지 설정 배포)
+
+6. Zero Touch Provisioning: 디바이스 초기 설정을 자동화하는 기능이다.
+(Ex. 새 노트북 로그인 즉시 회사 정책 자동 적용, Autopilot 기반 자동 세팅, 원격 프로비저닝)
